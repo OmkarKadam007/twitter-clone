@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 5000;
 
 console.log(`PORT value: ${PORT}`); // Log the PORT value
 
-app.use(express.json()); // to parse request body
+app.use(express.json({limit:"5mb"})); // to parse request body req.
 app.use(express.urlencoded({ extended: true })); // to parse form data(urlencoded)
 
 app.use(cookieParser())
